@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>KENESIS ARM</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>🤖 KENESIS ARM</h1>
+</header>
+
+<div class="container">
+
+    <img src="brazo.gif" class="robot-img">
+
+    <!-- BASE -->
+    <section>
+        <h2>🌀 Base Rotatoria (Stepper)</h2>
+        <label>Posición: <span id="baseVal">0</span>°</label>
+        <input type="range" min="0" max="360" value="0" id="base">
+
+        <label>Velocidad: <span id="speedBaseVal">250</span> RPM</label>
+        <input type="range" min="50" max="500" value="250" id="speedBase">
+    </section>
+
+    <!-- WRIST ROLL -->
+    <section>
+        <h2>🔄 Muñeca Rotación (Stepper)</h2>
+        <label>Posición: <span id="wristVal">0</span>°</label>
+        <input type="range" min="0" max="360" value="0" id="wrist">
+
+        <label>Velocidad: <span id="speedWristVal">250</span> RPM</label>
+        <input type="range" min="50" max="500" value="250" id="speedWrist">
+    </section>
+
+    <!-- SERVOS -->
+    <section>
+        <h2>🦾 Hombro (Servo 1)</h2>
+        <label>Ángulo: <span id="s1Val">90</span>°</label>
+        <input type="range" min="0" max="180" value="90" id="s1">
+    </section>
+
+    <section>
+        <h2>🦾 Codo (Servo 2)</h2>
+        <label>Ángulo: <span id="s2Val">90</span>°</label>
+        <input type="range" min="0" max="180" value="90" id="s2">
+    </section>
+
+    <section>
+        <h2>🦾 Muñeca Inclinación (Servo 3)</h2>
+        <label>Ángulo: <span id="s3Val">90</span>°</label>
+        <input type="range" min="0" max="180" value="90" id="s3">
+    </section>
+
+    <section>
+        <h2>🤏 Garra (Servo 4)</h2>
+        <label>Apertura: <span id="s4Val">90</span>°</label>
+        <input type="range" min="0" max="180" value="90" id="s4">
+    </section>
+
+    <button id="homeBtn">🏠 HOME</button>
+
+    <div id="estado">Sistema listo</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
